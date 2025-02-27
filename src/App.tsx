@@ -83,7 +83,7 @@ function App() {
             <div className="bg-blue-600 rounded-lg p-2 shadow-lg shadow-blue-600/20">
               <LineChart className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">Token Tracker</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Starter Project </h1>
           </div>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
