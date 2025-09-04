@@ -68,13 +68,6 @@ function App() {
     }).format(num);
   };
 
-  const formatMarketCap = (num: number): string => {
-    if (num >= 1e12) return `$${(num / 1e12).toFixed(2)}T`;
-    if (num >= 1e9) return `$${(num / 1e9).toFixed(2)}B`;
-    if (num >= 1e6) return `$${(num / 1e6).toFixed(2)}M`;
-    return `$${num.toFixed(2)}`;
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -128,18 +121,7 @@ function App() {
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-gray-900">
                       {formatNumber(token.price)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right">
-                      <div className={`flex items-center justify-end text-sm font-medium ${
-                        token.change24h >= 0 ? 'text-green-600' : 'text-red-600'
-                      }`}>
-                        {token.change24h >= 0 ? (
-                          <ArrowUpRight className="h-4 w-4 mr-1 animate-pulse" />
-                        ) : (
-                          <ArrowDownRight className="h-4 w-4 mr-1 animate-pulse" />
-                        )}
-                        {Math.abs(token.change24h)}%
-                      </div>
-                    </td>
+
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500">
                       {formatMarketCap(token.marketCap)}
                     </td>
