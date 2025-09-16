@@ -5,7 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     watch: {
-      ignored: ['**/.npm/**', '**/.cache/**']
+      ignored: [
+        "/node_modules/",
+        "/ignition/deployments/",
+        "/artifacts/",
+        "/cache/",
+        "/.npm/",
+        "/.cache/",
+      ],
     },
     host: "0.0.0.0",
     port: 5173,
