@@ -9,6 +9,10 @@ export default defineConfig({
     allowedHosts: ['.preview.metainside.io'],
   },
   plugins: [react()],
+   watch: {
+      // Ignore large directories to prevent file watcher issues
+      ignored: ['/node_modules/', '/ignition/deployments/', '/artifacts/', '/cache/']
+    },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
